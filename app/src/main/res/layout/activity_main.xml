@@ -59,17 +59,34 @@
                             android:layout_height="wrap_content"
                             android:text="Fahrenheit Menu" />
 
-                        <EditText
-                            android:id="@+id/fetxt_usr"
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/etxt_usr_bg"
-                            android:ems="10"
-                            android:hint="value"
-                            android:inputType="number"
-                            android:padding="4sp"
-                            android:textColor="#000"
-                            android:textSize="30sp" />
+                            android:layout_height="50sp"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:layout_marginRight="2sp"
+                                android:textColor="#000"
+                                android:background="@drawable/etxt_usr_bg"
+                                android:layout_width="50sp"
+                                android:layout_height="match_parent"
+                                android:onClick="add_dot_clicked"
+                                android:text="dot" />
+
+                            <EditText
+                                android:id="@+id/fetxt_usr"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/etxt_usr_bg"
+                                android:ems="10"
+                                android:hint="value"
+                                android:digits="0123456789.-"
+                                android:inputType="numberSigned"
+                                android:padding="4sp"
+                                android:textColor="#000"
+                                android:textSize="30sp" />
+
+                        </LinearLayout>
 
                         <TextView
                             android:layout_width="match_parent"
@@ -151,17 +168,36 @@
                             android:layout_height="wrap_content"
                             android:text="Kelvin Menu" />
 
-                        <EditText
-                            android:id="@+id/ketxt_usr"
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/etxt_usr_bg"
-                            android:ems="10"
-                            android:hint="value"
-                            android:inputType="number"
-                            android:padding="4sp"
-                            android:textColor="#000"
-                            android:textSize="30sp" />
+                            android:layout_height="50sp"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:layout_marginRight="2sp"
+                                android:textColor="#000"
+                                android:background="@drawable/etxt_usr_bg"
+                                android:layout_width="50sp"
+                                android:layout_height="match_parent"
+                                android:onClick="add_dot_clicked"
+                                android:text="dot" />
+
+                            <EditText
+                                android:id="@+id/ketxt_usr"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/etxt_usr_bg"
+                                android:ems="10"
+                                android:hint="value"
+                                android:digits="0123456789.-"
+                                android:inputType="numberSigned"
+                                android:padding="4sp"
+                                android:textColor="#000"
+                                android:textSize="30sp" />
+
+                        </LinearLayout>
+
+
 
                         <TextView
                             android:layout_width="match_parent"
@@ -243,17 +279,36 @@
                             android:layout_height="wrap_content"
                             android:text="Celsius Menu" />
 
-                        <EditText
-                            android:id="@+id/cetxt_usr"
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/etxt_usr_bg"
-                            android:ems="10"
-                            android:hint="value"
-                            android:inputType="number"
-                            android:padding="4sp"
-                            android:textColor="#000"
-                            android:textSize="30sp" />
+                            android:layout_height="50sp"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:layout_marginRight="2sp"
+                                android:textColor="#000"
+                                android:background="@drawable/etxt_usr_bg"
+                                android:layout_width="50sp"
+                                android:layout_height="match_parent"
+                                android:onClick="add_dot_clicked"
+                                android:text="dot" />
+
+                            <EditText
+                                android:id="@+id/cetxt_usr"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/etxt_usr_bg"
+                                android:ems="10"
+                                android:hint="value"
+                                android:digits="0123456789.-"
+                                android:inputType="numberSigned"
+                                android:padding="4sp"
+                                android:textColor="#000"
+                                android:textSize="30sp" />
+
+                        </LinearLayout>
+
+
 
                         <TextView
                             android:layout_width="match_parent"
