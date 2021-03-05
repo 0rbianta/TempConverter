@@ -68,6 +68,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 if(cetxt_usr.getText().toString().isEmpty())    return;
+                int b =0;
+                for(int i=0;i<cetxt_usr.getText().toString().length();i++){
+                    if(Character.toString(cetxt_usr.getText().toString().charAt(i)).equals("-")){
+                        if(i>0)     return;
+                        b++;
+                    }
+                }
+                if(b > 1)   return;
 
                 Float usr_entry = Float.valueOf(cetxt_usr.getText().toString());
 
@@ -101,6 +109,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 if(fetxt_usr.getText().toString().isEmpty())    return;
+                int b =0;
+                for(int i=0;i<fetxt_usr.getText().toString().length();i++){
+                    if(Character.toString(fetxt_usr.getText().toString().charAt(i)).equals("-")){
+                        if(i>0)     return;
+                        b++;
+                    }
+                }
+                if(b > 1)   return;
 
                 Float usr_entry = Float.valueOf(fetxt_usr.getText().toString());
 
@@ -134,6 +150,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 if(ketxt_usr.getText().toString().isEmpty())    return;
+                int b =0;
+                for(int i=0;i<ketxt_usr.getText().toString().length();i++){
+                    if(Character.toString(ketxt_usr.getText().toString().charAt(i)).equals("-")){
+                        if(i>0)     return;
+                        b++;
+                    }
+                }
+                if(b > 1)   return;
 
                 Float usr_entry = Float.valueOf(ketxt_usr.getText().toString());
 
@@ -178,14 +202,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void set_view(int id){
-        
-        koutput.setText("");
-        coutput.setText("");
-        foutput.setText("");
-        
         switch (id){
 
             case 1:{
+                koutput.setText("");
+                coutput.setText("");
+                foutput.setText("");
+
                 celsius.setVisibility(View.VISIBLE);
                 kelvin.setVisibility(View.GONE);
                 fahrenheit.setVisibility(View.GONE);
@@ -193,6 +216,10 @@ public class MainActivity extends AppCompatActivity {
             }
 
             case 2:{
+                koutput.setText("");
+                coutput.setText("");
+                foutput.setText("");
+
                 celsius.setVisibility(View.GONE);
                 kelvin.setVisibility(View.VISIBLE);
                 fahrenheit.setVisibility(View.GONE);
@@ -200,6 +227,10 @@ public class MainActivity extends AppCompatActivity {
             }
 
             case 3:{
+                koutput.setText("");
+                coutput.setText("");
+                foutput.setText("");
+
                 celsius.setVisibility(View.GONE);
                 kelvin.setVisibility(View.GONE);
                 fahrenheit.setVisibility(View.VISIBLE);
@@ -210,6 +241,17 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("debug", id+" not found. Fatal error");
                 System.exit(0);
         }
+    }
+
+    public void add_dot_clicked(View v){
+
+        System.out.println(((!ketxt_usr.getText().toString().contains(".")) && (!ketxt_usr.getText().toString().matches(""))));
+
+        if((!ketxt_usr.getText().toString().contains(".")) && (!ketxt_usr.getText().toString().matches("")))   ketxt_usr.append("");
+
+        if((!cetxt_usr.getText().toString().contains(".")) && (!cetxt_usr.getText().toString().matches("")))   cetxt_usr.append(".");
+
+        if((!fetxt_usr.getText().toString().contains(".")) && (!fetxt_usr.getText().toString().matches("")))   fetxt_usr.append(".");
     }
 
 
