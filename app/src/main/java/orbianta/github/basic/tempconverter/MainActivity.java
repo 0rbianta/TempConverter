@@ -202,13 +202,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void set_view(int id){
+        koutput.setText("");
+        coutput.setText("");
+        foutput.setText("");
+        
         switch (id){
 
             case 1:{
-                koutput.setText("");
-                coutput.setText("");
-                foutput.setText("");
-
                 celsius.setVisibility(View.VISIBLE);
                 kelvin.setVisibility(View.GONE);
                 fahrenheit.setVisibility(View.GONE);
@@ -216,10 +216,6 @@ public class MainActivity extends AppCompatActivity {
             }
 
             case 2:{
-                koutput.setText("");
-                coutput.setText("");
-                foutput.setText("");
-
                 celsius.setVisibility(View.GONE);
                 kelvin.setVisibility(View.VISIBLE);
                 fahrenheit.setVisibility(View.GONE);
@@ -227,10 +223,6 @@ public class MainActivity extends AppCompatActivity {
             }
 
             case 3:{
-                koutput.setText("");
-                coutput.setText("");
-                foutput.setText("");
-
                 celsius.setVisibility(View.GONE);
                 kelvin.setVisibility(View.GONE);
                 fahrenheit.setVisibility(View.VISIBLE);
